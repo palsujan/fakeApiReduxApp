@@ -2,11 +2,11 @@ import { ActionTypes } from "../contants/action-types";
 
 const initialState ={
     products: [
-        {
-            id: 1,
-            title: "Sujan",
-            category: "programmer"
-        }
+        // {
+        //     id: 1,
+        //     title: "Sujan",
+        //     category: "programmer"
+        // }
     ]
 }
 // export const productReducer = (state, {type, payload}) => {
