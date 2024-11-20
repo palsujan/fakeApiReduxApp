@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <div className='ui fixed menu p-2'>
+    <div className='ui fixed menu'>
         <div className="ui container center">
             {/* <img src={logo} className='ui small' width="20%" height="100%" alt='Image_logo'/> */}
             <h2>Fake Shop</h2>
