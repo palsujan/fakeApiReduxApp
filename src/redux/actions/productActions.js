@@ -16,9 +16,8 @@ export const selectedProducts = (product) =>{
     }
 }
 
-// export const REMOVE_SELECTED_PRODUCT = (products) =>{
-//     return {
-//         type: ActionTypes.REMOVE_SELECTED_PRODUCT,
-//         payload: products,
-//     }
-// }
+export const removeSelectedProduct = (products) =>{
+    return {
+        type: ActionTypes.REMOVE_SELECTED_PRODUCT,
+    }
+}

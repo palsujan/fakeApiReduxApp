@@ -39,6 +39,10 @@ export const selectedProductReducer = (state = {}, {type,payload})=>{
                 ...state,
                  ...payload, // Assuming 'payload' contains the products array
             };
+            case ActionTypes.REMOVE_SELECTED_PRODUCT:
+                return {
+                    // Assuming 'payload' contains the products array
+                };
         default:
             return state;
     }

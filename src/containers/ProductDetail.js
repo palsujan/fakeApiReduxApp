@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { selectedProducts } from '../redux/actions/productActions';
+import { removeSelectedProduct, selectedProducts } from '../redux/actions/productActions';
 
 const ProductDetail = () => {
   const product = useSelector((state) => state?.product); // Correct state access
@@ -16,12 +16,15 @@ const ProductDetail = () => {
       const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
       dispatch(selectedProducts(response.data)); // Dispatch fetched product data
     } catch (error) {
-      console.error("Error fetching product details:", error);
+    //   console.error("Error fetching product details:", error);
     }
   };
 
   useEffect(() => {
     if (productId && productId !== "") fetchProductDetail();
+    return () =>{
+        dispatch(removeSelectedProduct());
+    }
   }, [productId]);
 
   return (
